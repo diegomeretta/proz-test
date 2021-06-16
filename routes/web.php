@@ -69,7 +69,19 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     // Proz Routes
     Route::get('languages', 'ProzController@language')->name('languages');
+    Route::get('languages/create', 'ProzController@languageCreate')->name('languages.create');
+    Route::post('languages/store', 'ProzController@languageStore')->name('languages.store');
+    Route::any('languages/{id}/destroy', 'ProzController@languageDestroy')->name('languages.destroy');
+
     Route::get('glossary', 'ProzController@glossary')->name('glossary');
+    Route::get('glossary/create', 'ProzController@glossaryCreate')->name('glossary.create');
+    Route::post('glossary/store', 'ProzController@glossaryStore')->name('glossary.store');
+    Route::get('glossary/{id}/translations', 'ProzController@glossaryTranslations')->name('glossary.translations');
+
+    Route::get('glossary/{id}/translations/create', 'ProzController@translationCreate')->name('translations.create');
+    Route::post('glossary/{id}/translations/store', 'ProzController@translationStore')->name('translations.store');
+    Route::get('glossary/{glossary_id}/translations/{language_id}/edit', 'ProzController@translationEdit')->name('translations.edit');
+    Route::post('glossary/{glossary_id}/translations/{language_id}/update', 'ProzController@translationUpdate')->name('translations.update');
 
 });
 

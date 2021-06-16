@@ -1,11 +1,11 @@
 @extends('admin.layouts.admin')
 
-@section('title', 'Language')
+@section('title', 'Glossary')
 
 @section('content')
 <div class="no-padding pull-right">
     <div class="form-inline">
-        <a href="{{ route('admin.languages.create')}}" class="btn btn-primary ladda-button pull-right" data-style="zoom-in">New</a>
+        <a href="{{ route('admin.glossary.create')}}" class="btn btn-primary ladda-button pull-right" data-style="zoom-in">New</a>
     </div>
 </div>
 <br>
@@ -14,19 +14,19 @@
            width="100%">
         <thead>
         <tr>
-            <th>Name</th>
+            <th>Text</th>
             <th>Created at</th>
             <th>Actions</th>
         </tr>
         </thead>
         <tbody>
-        @foreach($languages as $language)
+        @foreach($glossary as $glossari)
             <tr>
-                <td>{{ $language->name }}</td>
-                <td>{{ $language->created_at }}</td>
+                <td>{{ $glossari->text }}</td>
+                <td>{{ $glossari->created_at }}</td>
                 <td>
-                    <a href="{{ route('admin.languages.destroy', [$language->id]) }}" class="btn btn-xs btn-danger user_destroy" data-toggle="tooltip" data-placement="top" data-title="destroy" disabled>
-                        <i class="fa fa-trash"></i>
+                    <a href="{{ route('admin.glossary.translations', [$glossari->id]) }}" class="btn btn-xs" data-toggle="tooltip" data-placement="top" data-title="Translations">
+                        <i class="fa fa-edit"></i>
                     </a>
                 </td>
             </tr>

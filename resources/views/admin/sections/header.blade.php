@@ -20,8 +20,6 @@
                         </li>
                     </ul>
                 </li>
-
-                <li class="guided-tour"><span>Start Tour</span></li>
             </ul>
         </nav>
     </div>
