@@ -1,6 +1,6 @@
 @extends('admin.layouts.admin')
 
-@section('title', 'Create Language')
+@section('title', 'Create Glossary')
 
 @section('content')
     <div class="row">
