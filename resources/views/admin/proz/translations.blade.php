@@ -5,7 +5,7 @@
 @section('content')
 <div class="no-padding pull-right">
     <div class="form-inline">
-        <a href="{{ route('admin.translations.create', $glossary->id)}}" class="btn btn-primary ladda-button pull-right" data-style="zoom-in">New</a>
+        <a href="{{ route('admin.translations.create', $glossary->id)}}" class="btn btn-primary ladda-button pull-right" data-style="zoom-in">New Translation</a>
     </div>
 </div>
 <br>
