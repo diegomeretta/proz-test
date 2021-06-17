@@ -25,9 +25,9 @@
                 <td>{{ $language->name }}</td>
                 <td>{{ $language->created_at }}</td>
                 <td>
-                    <a href="{{ route('admin.languages.destroy', [$language->id]) }}" class="btn btn-xs btn-danger user_destroy" data-toggle="tooltip" data-placement="top" data-title="destroy" disabled>
+                    {{-- <a href="{{ route('admin.languages.destroy', [$language->id]) }}" class="btn btn-xs btn-danger user_destroy" data-toggle="tooltip" data-placement="top" data-title="destroy" disabled>
                         <i class="fa fa-trash"></i>
-                    </a>
+                    </a> --}}
                 </td>
             </tr>
         @endforeach
