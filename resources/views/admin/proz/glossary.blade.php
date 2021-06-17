@@ -25,8 +25,8 @@
                 <td>{{ $glossari->text }}</td>
                 <td>{{ $glossari->created_at }}</td>
                 <td>
-                    <a href="{{ route('admin.glossary.translations', [$glossari->id]) }}" class="btn btn-xs" data-toggle="tooltip" data-placement="top" data-title="Translations">
-                        <i class="fa fa-edit"></i>
+                    <a href="{{ route('admin.glossary.translations', [$glossari->id]) }}" class="btn btn-xs" data-toggle="tooltip" data-placement="top" data-title="See Translations">
+                        <button>See Translations</button>
                     </a>
                 </td>
             </tr>
